@@ -91,7 +91,10 @@ RUN mkdir -p /output \
   && mkdir -p /opt/ol \
   && chown -R java_user /opt/ol \
   && chmod 775 /opt/ol \
-  && mkdir -p /work/outer-loop-app \
+  && mkdir -p /projects \
+  && chown -R java_user /projects \
+  && chmod -R 775 /projects \
+  && mkdir -p /work \
   && chown -R java_user /work \
   && chmod -R 775 /work
 # Point to local /mvn/repository within container
